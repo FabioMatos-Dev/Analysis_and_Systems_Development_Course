@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 1</title>
+    <style type="text/css">
+        body{
+            background-color: #c6ddf4;
+        }
+        h1{
+            color: rgb(50, 6, 40);
+          
+        }
+        h2{
+            padding: 5px;
+            margin-left: 40px;
+
+        }
+        p{
+            padding: 5px;
+            margin-left: 40px;
+        }
+    </style>
+   
+</head>
+<body>
+    <header>
+        <div class="home-image">
+            <div class="img-box">
+                <img src="Banner.jfif" alt="image" height="200" width="100%"> 
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <h1 style="border: 4px solid red;text-align: center; background-color: aquamarine;"><b>EXERCÍCIO 1</b></h1>
+        <script language="javascript">
+            alert("Clique em INICIAR para começar a inserir os números!");
+                function myFunction(){
+                    var contadorNegativo = 0;
+                    for(var i=1; i<=5; i++){
+                        var valor = parseFloat(prompt("Insira um número: " + 1));
+                        if(valor<0){
+                            contadorNegativo++;
+                        }
+                    }
+                var resultado = "Número de valores negativos: " + contadorNegativo; document.body.innerHTML += " " + resultado + " ";
+                }  
+            </script>
+    </div>
+    <h2>LEITURA DE VALORES (RETORNA VALORES NEGATIVOS)</h2>
+    <P>Escrever um algoritmo que lê 5 valores para a, um de cada vez,<br>
+    e conta quantos destes valores são negativos, escrevendo na tela esta informação</P>
+
+    <p id="exe"></p>   
+
+    <button style="margin-bottom: 20px;margin-left: 40px;" type="button" onclick="myFunction()">INICIAR</button>
+
+    <div>
+        <a style="padding: 5px;margin-left: 40px;" href="file:///C:/Users/fmfab/Desktop/Exercícios WebDev/index.html">
+        <img src="volte.png" alt="Image" height="45" width="90" /></a>
+    </div>
+</body>
+</html>
+

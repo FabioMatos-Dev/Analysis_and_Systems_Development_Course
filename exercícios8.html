@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 8</title>
+    <style type="text/css">
+      body{
+        background-color: #c6ddf4;
+      }
+      h1{
+        color: rgb(50, 6, 40);
+      }
+      h2{
+        padding: 5px;
+        margin-left: 40px;
+      }
+      p{
+        padding: 5px;
+       margin-left: 40px;
+      }
+    </style>
+
+  <script>
+    function calcular() {
+        let valor = document.querySelector("input#valor"); // Pega valor digitado no input
+        let res = document.querySelector("div#resultado"); // Pega div (onde deve inserir resultado)
+        let vfinal = valor.value; // Pega o valor pra poder fazer a operação matemática
+        res.innerHTML = "Resultado aqui <br/>";
+        for (let y = 1; y <= 10; y++) {
+            let multiplicacao = vfinal * y;
+            //document.write( y + ' x ' +valor.value+ ' = ' + (y * valor.value) + '<br>')
+            res.innerHTML += `${vfinal} x ${y} = ${multiplicacao} <br/>`; //
+        }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="home-image">
+        <div class="img-box">
+            <img src="Banner.jfif" alt="image" height="200" width="100%"> 
+        </div>
+    </div>
+</header>
+<div>
+  <h1 style="border: 4px solid red;text-align: center; background-color: aquamarine;"><b>EXERCÍCIO 8</b></h1>
+</div>
+  <h2>TABUADA</h2>
+    <p>Escrever um algoritmo que lê um número e escreve a sua respectiva tabuada.</p>
+    <p><b>Selecione o número na caixa seletora abaixo e clique em CALCULAR.</b></p>
+
+    <p><input type="number" id="valor">
+        <input style="margin-bottom: 20px;margin-left: 40px;" type="button" value="Calcular" onclick="calcular()">
+    </p>
+
+<p>
+<div style="padding:0px;margin-left: 40px;border: 1px solid red; background-color: bisque; width: 250px;height: 280px;" id="resultado">
+  Resultado aqui
+</div>
+</p>
+
+<div>
+  <a style="margin-top: 0px;margin-left: 40px;" href="file:///C:/Users/fmfab/Desktop/Exercícios WebDev/index.html">
+  <img src="volte.png" alt="Image" height="45" width="90" /></a>
+</div>
+</body>
+</html>

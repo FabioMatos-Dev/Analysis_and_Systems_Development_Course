@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: #c6ddf4;
+        }
+        h1{
+            color: rgb(50, 6, 40);
+          
+        }
+        h2{
+            padding: 5px;
+            margin-left: 40px;
+
+        }
+        p{
+            padding: 5px;
+            margin-left: 40px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 7</title>
+
+
+    <script language="javascript">
+        alert("Insira números positivos para calcular a média. Digite 0 para parar");
+        function numeros(){
+            let numero = Number(window.prompt("Insira um número: "))
+            let soma = 0
+            let cont = 0
+            while (numero>0 ){
+                soma=soma+numero
+                cont=cont+1
+                numero = Number(window.prompt("Insira um número: "))
+            }
+            const media = soma/cont
+                document.getElementById("exe").innerHTML= "A média dos números digitados é: " + media.toFixed(2);
+                alert("ATENÇÃO! Clique em INICIA/REINICIA para novo cálculo.");
+        }  
+    </script>
+     
+</head>
+<body>
+    <header>
+        <div class="home-image">
+            <div class="img-box">
+                <img src="Banner.jfif" alt="image" height="200" width="100%"> 
+            </div>
+        </div>
+    </header>
+    <div>
+        <h1 style="border: 4px solid red;text-align: center; background-color: aquamarine;"><b>EXERCÍCIO 7</b></h1>
+    </div>
+    <h2>CÁLCULO DE MÉDIA</h2>
+    <p>Escrever um algoritmo que lê um número não determinados de valores N, todos inteiros e positivos, <br>
+    um de cada vez, e calcule e escreva a média aritmética dos valores lidos</p>
+    <p>Clique em <b>INICIA/REINICIA</b> para iniciar o cálculo inserindo os números que você desejar,<br>
+    bem como para iniciar um novo cálculo.</p>
+
+    <p id="exe"></p>
+
+    <button style="margin-bottom: 20px;margin-left: 40px;" type="button" onclick="numeros()">INICIA/REINICIA</button>
+   
+    <div>
+        <a style="padding: 5px;margin-left: 40px;" href="file:///C:/Users/fmfab/Desktop/Exercícios WebDev/index.html">
+            <img src="volte.png" alt="Image" height="45" width="90" /></a>
+    </div>
+</body>
+</html>

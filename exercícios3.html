@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 3</title>
+    <style type="text/css">
+        body{
+            background-color: #c6ddf4;
+        }
+        h1{
+            color: rgb(50, 6, 40);
+          
+        }
+        h2{
+            padding: 5px;
+            margin-left: 40px;
+
+        }
+        p{
+            padding: 5px;
+            margin-left: 40px;
+        }
+    </style>
+     <script language="javascript">
+        function myFunction(){
+            var alunos = [];
+            var alunoMaisAlto = { numero: 0, altura: 0 };
+            var alunoMaisBaixo = { numero: 0, altura: 
+        Number.MAX_VALUE };
+            for (var i = 0; i < 5; i++) {
+                var numeroAluno = parseInt(prompt("Digite o número do aluno " + (i + 1)));
+                var alturaAluno = parseFloat(prompt("Digite a altura do aluno " + (i + 1) + " (em centímetros)"));
+                alunos.push({ numero: numeroAluno, altura: alturaAluno });
+                if (alturaAluno > alunoMaisAlto.altura) {
+                    alunoMaisAlto.numero = numeroAluno;
+                    alunoMaisAlto.altura = alturaAluno;
+                } 
+                
+                if (alturaAluno < alunoMaisBaixo.altura) {
+                    alunoMaisBaixo.numero = numeroAluno;
+                    alunoMaisBaixo.altura = alturaAluno;
+                }
+            }
+            var resultado = "Aluno mais alto: Número " + alunoMaisAlto.numero + ", Altura " + alunoMaisAlto.altura + "cm (o mais alto)";
+            resultado += "<br>Aluno mais baixo: Número " + alunoMaisBaixo.numero + ", Altura " + alunoMaisBaixo.altura + "cm (o mais baixo)";
+            document.body.innerHTML += "<p>" + resultado + "</p>";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="home-image">
+            <div class="img-box">
+                <img src="Banner.jfif" alt="image" height="200" width="100%"> 
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <h1 style="border: 4px solid red;text-align: center; background-color: aquamarine;"><b>EXERCÍCIO 3</b></h1>
+    </div>
+    <h2>NÚMERO E ALTURA DO ALUNO</h2>
+    <p>Escrever um algoritmo que lê 5 conjuntos de 2 valores, o primeiro representando o número de um<br>
+    aluno e o segundo representando a sua altura em centímetros. Encontrar o aluno mais alto e o mais baixo <br>
+    e escrever seus números, suas alturas e uma mensagem dizendo se é o mais alto ou o mais baixo.</p>
+
+    <p id="exe"></p>  
+
+    <button style="margin-bottom: 20px;margin-left: 40px;" type="button" onclick="myFunction()">INICIAR</button>
+
+    <div>
+         <a style="padding: 5px;margin-left: 40px;" href="file:///C:/Users/fmfab/Desktop/Exercícios WebDev/index.html">
+        <img src="volte.png" alt="Image" height="45" width="90" /></a>
+    </div>
+</body>
+</html>

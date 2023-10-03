@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 2</title>
+    <style type="text/css">
+        body{
+            background-color: #c6ddf4;
+        }
+        h1{
+            color: rgb(50, 6, 40);
+          
+        }
+        h2{
+            padding: 5px;
+            margin-left: 40px;
+
+        }
+        p{
+            padding: 5px;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="home-image">
+            <div class="img-box">
+                <img src="Banner.jfif" alt="image" height="200" width="100%"> 
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <h1 style="border: 4px solid red;text-align: center; background-color: aquamarine;"><b>EXERCÍCIO 2</b></h1>
+    </div>
+    <h2>ABASTECIMENTO DE GASOLINA</h2>
+    <p>Um motorista deseja colocar no seu tanque X reais de gasolina. <br>
+    Escreva um algoritmo para ler opreço do litro da gasolina e o valor do pagamento, <br>
+    e exibir quantos litros ele conseguiu colocar no tanque.</p>
+    
+    <p id="exe"></p>
+    
+    <script language="javascript">
+
+    let reais=window.prompt("Digite quantos reais você vai por de gasolina: ");
+    let preço=window.prompt("Digite o preço do litro da gasolina: ");
+    let litros = reais/preço;
+    console.log(litros);
+    console.log(parseFloat(litros));
+
+     document.getElementById("exe").innerHTML="Você conseguiu abastecer seu veículo com: " + litros.toFixed(2) +" litros de gasolina";
+    </script>
+
+<div>
+    <a style="padding: 5px;margin-left: 40px;" href="file:///C:/Users/fmfab/Desktop/Exercícios WebDev/index.html">
+    <img src="volte.png" alt="Image" height="45" width="90" /></a>
+</div>
+</body>
+</html>
